@@ -68,21 +68,21 @@
   height: 100px;
   border-bottom: 1px solid #eeeeee;
   box-sizing: border-box;
-  overflow: scroll;
-  overflow-y: hidden;
-}
-.main-header-group-name {
-  padding-top: 35px;
-  font-size: 20px;
-  color: #333333;
-  box-sizing: border-box;
-}
-.main-header-members {
-  padding-top: 15px;
-  font-size: 12px;
-  color: #999999;
-  display: inline-block;
-  white-space: nowrap;
+  overflow: scroll hidden;
+  &__group-name {
+    padding-top: 35px;
+    font-size: 20px;
+    color: #333333;
+    box-sizing: border-box;
+  }
+  &__members {
+    padding-top: 15px;
+    font-size: 12px;
+    color: #999999;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  
 }
 .button-edit {
   height: 40px;
