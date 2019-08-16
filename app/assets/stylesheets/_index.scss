@@ -9,7 +9,15 @@
   text-align: center;
   line-height: 24px;
 }
-
+.left-side__group-list::-webkit-scrollbar {
+  display:none;
+}
+.main-header::-webkit-scrollbar {
+  display:none;
+}
+.main-messages::-webkit-scrollbar {
+  display:none;
+}
 .left-side {
   width: 300px;
   float: left;
