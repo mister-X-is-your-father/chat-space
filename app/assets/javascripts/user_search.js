@@ -1,9 +1,11 @@
 $(function() {
 
   var search_list = $("#user-search-result");
+  var member_list = $(".chat-group-user");
 
   function appendUser(user){
-    var html = `<div class="chat-group-user clearfix">
+    var html = `
+                <div class="chat-group-user clearfix">
                   <p class="chat-group-user__name">${user.name}</p>
                   <a class="user-search-add chat-group-user__btn chat-group-user__btn--add js-add-btn" data-user-id=${user.id} data-user-name=${user.name}>追加</a>
                 </div>`;
@@ -17,7 +19,15 @@ $(function() {
       search_list.append(html);
   }
 
-  function addUser() {
+  function addUser(user_id, user_name) {
+    console.log(user_id);
+    var html = `
+              <div class="chat-group-user clearfix js-chat-member" id=${user_id}>
+              <input value="22" name="group[user_ids][]" type="hidden" id="group_user_ids">
+              <p class="chat-group-user__name">${user_name}</p>
+              </div>
+    `;
+    member_list.append(html);
     }
 
   $("#user-search-field").on("keyup", function() {
@@ -46,9 +56,9 @@ $(function() {
 
   $(document).on("click",'.user-search-add', function(){
     var user_id =  $(this).attr('data-user-id');
+    var user_name =  $(this).attr('data-user-name');
+    addUser(user_id,user_name)
     $(this).parent().remove();
     // var user_id = $('select').val();
-    console.log(user_id);
-    addUser()
   });
   });
