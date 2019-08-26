@@ -13,7 +13,6 @@ $(function() {
   }
 
 
-//未実装
   function appendNoUser(user){
     var html = `一致するユーザーが見つかりません`;
       search_list.append(html);
@@ -46,7 +45,7 @@ $(function() {
         });
       }
       else {
-        appendNoUser("一致するユーザはいません");//未実装
+        appendNoUser("一致するユーザはいません");
       }
     })
     .fail(function(){
