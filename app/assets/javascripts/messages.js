@@ -38,9 +38,8 @@ $(function(){
     })
     .done(function(message){
       var html = buildMessage(message);
-      $('.messages').append(html)
-      $('.form__message').val('')
-      $('.add_image').val('')
+      $('.messages').append(html);
+      $('.inner_form')[0].reset();
       $('.form__submit').prop('disabled', false);
       ScrollToNewMessage();
     })
