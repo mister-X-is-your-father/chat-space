@@ -5,7 +5,7 @@
   .chat
     .header
       .left-header
-        .left-header__title
+        .left-header__title{data: {group_id: @group.id}}
           = @group.name
         %ul.left-header__members
           Member：
@@ -14,7 +14,7 @@
               = member.name
       .right-header
         .right-header__button
-          = link_to edit_group_path(@group) do
+          = link_to edit_group_path(@group), data: {"turbolinks" => false} do
             Edit
     .messages
       = render @messages
