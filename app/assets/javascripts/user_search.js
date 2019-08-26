@@ -60,7 +60,7 @@ $(function() {
     $(this).parent().remove();
   });
 
-  $(document).on("click",'.user-search-remove', function(){
+  $(document).on("click",'.js-remove-btn', function(){
     $(this).parent().remove();
   });
 
