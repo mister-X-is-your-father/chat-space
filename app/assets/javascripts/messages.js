@@ -1,7 +1,7 @@
 $(document).on('turbolinks:load', function() {
 $(function(){
   function buildMessage(message){
-    image = ( message.image ) ? `<img class= "lower-message__image" src=${ message.image } >` : "";
+    image = (message.image) ? `<img class= "lower-message__image" src=${message.image} >` : "";
     var html = `<div class="message" data-message-id="${message.id}">
                 <div class="upper-message">
                 <div class="upper-message__user-name">
@@ -45,7 +45,7 @@ $(function(){
       ScrollToNewMessage();
     })
     .fail(function(){
-      alert('error')
+      // alert('error');
     })
   })
 
@@ -70,7 +70,7 @@ $(function(){
     })
 
     .fail(function() {
-      console.log('error');
+      alert('reload-error');
     });
   };
   if (window.location.href.match(/\/groups\/\d+\/messages/)) {
