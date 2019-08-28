@@ -72,6 +72,7 @@ group :production do
   gem 'devise'
   gem 'carrierwave'
   gem 'mini_magick'
+  gem 'fog-aws'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
