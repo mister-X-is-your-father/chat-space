@@ -45,7 +45,7 @@ $(function(){
       ScrollToNewMessage();
     })
     .fail(function(){
-      alert('error');
+      alert('メッセージを入力して下さい');
       $('.form__submit').prop('disabled', false);
     })
   })
@@ -71,7 +71,7 @@ $(function(){
     })
 
     .fail(function() {
-      alert('reload-error');
+      alert('reload error');
     });
   };
   if (window.location.href.match(/\/groups\/\d+\/messages/)) {
