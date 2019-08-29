@@ -15,7 +15,7 @@ $(function() {
 
 
   function appendNoUser(user){
-    var html = `一致するユーザーが見つかりません`;
+    var html = user;
       search_list.append(html);
   }
 
@@ -40,13 +40,18 @@ $(function() {
     })
     .done(function(users){
       $("#user-search-result").empty();
+      console.log($("#user-search-field").val());
       if (users.length !== 0) {
         users.forEach(function(user){
           appendUser(user);
+          if ($("#user-search-field").val() === "") {
+            search_list.children().remove();
+          }
+          // console.log($("#user-search-field").val())
         });
       }
       else {
-        appendNoUser("一致するユーザはいません");
+        appendNoUser("一致するユーザーが見つかりません");
       }
     })
     .fail(function(){

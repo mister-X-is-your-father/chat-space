@@ -25,7 +25,9 @@
       }
     }
   }
-
+  .groups::-webkit-scrollbar{
+    display: none;
+  }
   .groups {
     position: absolute;
     background-color: $side_blue_light;

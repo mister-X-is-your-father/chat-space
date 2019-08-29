@@ -46,6 +46,7 @@ th,
 td {
   margin:0;
   padding:0;
+  box-sizing: border-box;
 }
 table {
   border-collapse:collapse;
@@ -118,6 +119,11 @@ textarea,
 select {
   *font-size:100%;
 }
+a, a:visited{
+  text-decoration: none;
+  color: inherit;
+}
+
 /*because legend doesn't inherit in IE */
 legend {
   color:#000;
