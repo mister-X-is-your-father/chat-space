@@ -15,14 +15,14 @@
       .right-header
         .right-header__button
           = link_to edit_group_path(@group), data: {"turbolinks" => false} do
-            Edit
+            グループ編集
     .messages
       = render @messages
     .form
       = form_for([@group, @message],html:{class: 'inner_form'}) do |f|
-        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        = f.text_field :content, class: 'form__message', placeholder: 'メッセージを入力してください'
         .form__mask
           = f.label :image, class: 'form__mask__image' do
             = fa_icon 'picture-o', class: 'icon'
             = f.file_field :image, class: 'hidden add_image'
-        = f.submit 'Send', class: 'form__submit'
+        = f.submit '送信', class: 'form__submit'
